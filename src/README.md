@@ -54,10 +54,10 @@ All data is stored in memory, which means data will be reset when the server res
 
 ## Testing
 
-From the repository root, install the development dependencies and run the tests:
+From the repository root, install the dependencies (including pytest) and run the tests:
 
 ```bash
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements.txt
 python -m pytest tests -q
 ```
 
