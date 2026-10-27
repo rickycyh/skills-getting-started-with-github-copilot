@@ -51,3 +51,20 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Testing
+
+From the repository root, install the development dependencies and run the tests:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest tests -q
+```
+
+Tests live in the separate `tests/` directory and follow the
+Arrange-Act-Assert (AAA) pattern. Shared pytest fixtures provide isolated activity
+data for every test and restore the application's original data afterward.
+FastAPI's TestClient exercises the API and static routes without a running server
+or external services.
+
+Run `python -m pytest -q` to use the configured test discovery.
